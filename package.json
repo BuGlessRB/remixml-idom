@@ -1,0 +1,35 @@
+{
+  "name": "remixml-idom",
+  "version": "4.0.0",
+  "description": "Remixml component that renders to incremental-DOM",
+  "main": "remixml-idom.min.js",
+  "browser": "remixml-idom.min.js",
+  "scripts": {
+    "prepare": "./prepfiles"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "remixml": "*",
+    "incremental-dom": "*"
+  },
+  "devDependencies": {},
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BuGlessRB/remixml-idom"
+  },
+  "keywords": [
+    "remixml",
+    "incremental",
+    "diff",
+    "patch",
+    "DOM",
+    "render",
+    "zerodeps"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Stephen R. van den Berg <srb@cuci.nl>",
+  "license": "(ISC OR GPL-3.0)"
+}
