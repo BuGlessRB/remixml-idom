@@ -8,7 +8,7 @@ Remixml component that renders to incremental-DOM.
 
 ## Requirements
 
-It runs inside any webbrowser or NodeJS environment.
+It runs inside any webbrowser environment.
 
 ## Reference documentation
 
