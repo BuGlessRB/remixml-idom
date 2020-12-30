@@ -76,21 +76,23 @@
       idom["elementClose"](name);
   }
 
-  function /** !Object */ factory(/** !Object */ idomr)
+  function /** !Object */ factory(/** !Object */ rxml,/** !Object */ idomr)
   { idom = idomr;
+    O.assign(rxml, g);
     return g;
   }
 
+  const /** string */ rxs = "remixml";
   const /** string */ iname = "incremental-dom";
 
   if (typeof define == "function" && define["amd"])
-    define("remixml-idom", [iname], factory);
+    define("remixml-idom", [rxs, iname], factory);
   else if (typeof exports == "object")
     O.assign(/** @type{!Object} */(exports),
-     factory(require(iname)));
+     factory(require(rxs), require(iname)));
   else {
     var W = window;
-    W["RemixmliDOM"] = factory(W["IncrementalDOM"]);
+    W["RemixmliDOM"] = factory(W["Remixml"], W["IncrementalDOM"]);
   }
 
 // Cut BEGIN delete
