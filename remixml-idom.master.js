@@ -42,11 +42,17 @@
 
   function /** void */ abstract2idom(/** !Array */ vdom)
   { var /** string|number */ name = /** @type{Object} */(vdom)[""];
+    function /** void */ createcm(/** string */ txt)
+    { // Kludge, because incremental-dom does not support comment nodes
+      var /** !Node */ node = idom["text"](name);
+      node.parentNode.replaceChild(D.createComment(txt), node);
+    }
     switch (name)
     { case "!":
-        // Kludge, because incremental-dom does not support comment nodes
-        let /** !Node */ node = idom["text"](name);
-        node.parentNode.replaceChild(D.createComment(vdom[0]), node);
+	createcm(vdom[0]);
+        return;
+      case "?":
+	createcm("?" + vdom[0]);
         return;
       case 1:
         name = 0;
