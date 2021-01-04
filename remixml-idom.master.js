@@ -51,8 +51,9 @@
     { case "!":
 	createcm(vdom[0]);
         return;
+      case "<":
       case "?":
-	createcm("?" + vdom[0]);
+	createcm(name + vdom[0]);
         return;
       case 1:
         name = 0;
