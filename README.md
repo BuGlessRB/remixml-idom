@@ -12,7 +12,7 @@ It runs inside any webbrowser environment.
 
 ## Reference documentation
 
-- `Remixmlidom.abstract2dom(abstract, node)`<br />
+- `Remixmlidom.abstract2dom(abstract, node?)`<br />
   Transmogrifies the children of DOM `node` to match the structure
   described by the DOM `abstract` using the incremental-dom library.
   Returns `node` again.

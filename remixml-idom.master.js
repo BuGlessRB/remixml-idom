@@ -32,10 +32,11 @@
 
   var /** !Object */ idom;
 
-  var g =
+  const /** !Object */ g =
   { "abstract2dom":
-      function /** !Node */(/** !Array */ tpl, /** !Node */ node)
-      { idom["patch"](node, abstract2idom, tpl);
+      function /** !Node */(/** !Array */ tpl, /** !Node= */ node)
+      { idom["patch"](node = node || D.createDocumentFragment(),
+	 abstract2idom, tpl);
 	return node;
       }
   };
