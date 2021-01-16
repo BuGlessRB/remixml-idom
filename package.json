@@ -1,8 +1,7 @@
 {
   "name": "remixml-idom",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Remixml component that renders to incremental-DOM",
-  "main": "remixml-idom.min.js",
   "browser": "remixml-idom.min.js",
   "scripts": {
     "prepare": "./prepfiles"
