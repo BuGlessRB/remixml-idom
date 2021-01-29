@@ -67,8 +67,11 @@
           switch (narg[0])
           { default:
               let /** string */ val = /** @type{Object} */(vdom)[narg];
-              if (val != null && typeof val !== "object")
+              if (val != null)
+	      { if (val[""])
+		  val = val.join("");
                 idom["attr"](narg, val);
+	      }
             case "_":case undefined:;
           }
         idom["elementOpenEnd"]();

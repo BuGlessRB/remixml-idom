@@ -1,6 +1,6 @@
 {
   "name": "remixml-idom",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Remixml component that renders to incremental-DOM",
   "browser": "remixml-idom.min.js",
   "scripts": {
