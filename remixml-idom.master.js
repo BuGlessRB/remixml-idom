@@ -68,10 +68,7 @@
           { default:
               let /** string */ val = /** @type{Object} */(vdom)[narg];
               if (val != null)
-	      { if (val[""])
-		  val = val.join("");
-                idom["attr"](narg, val);
-	      }
+                idom["attr"](narg, val[""] ? val.join("") : val);
             case "_":case undefined:;
           }
         idom["elementOpenEnd"]();
