@@ -74,12 +74,19 @@
         idom["elementOpenEnd"]();
     }
     var /** number */ i = 0;
-    var /** !Array|string */ child;
+    var /** !Array|string|number */ child;
     while ((child = vdom[i++]) !== undefined)
-      if (child[""])
+    { if (child[""])
         abstract2idom(child);
       else
+      { var /** !Array|string */ nextchild;
+        child = /** @type {number} */(child) + "";      // Cast to string
+        // Concatenate strings first
+        while((nextchild = vdom[i]) !== undefined && !nextchild[""])
+          i++, child += nextchild;
         idom["text"](child);
+      }
+    }
     if (name)
       idom["elementClose"](name);
   }
