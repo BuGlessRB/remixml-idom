@@ -23,13 +23,6 @@
   const O = Object;
   const D = document;
 
-  if (!O.assign)
-    O.defineProperty(O, "assign",
-    { "value": function(d, s, i)
-      { if (s) for (i in s) d[i] = s[i]; return d;
-      }
-    });
-
   var /** !Object */ idom;
 
   const /** !Object */ g =
