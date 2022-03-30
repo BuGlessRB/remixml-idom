@@ -59,7 +59,7 @@
         for (narg of O.keys(vdom).splice(vdom.length))
           switch (narg[0])
           { default:
-              let /** string */ val = /** @type{Object} */(vdom)[narg];
+              let /** string|Array */ val = /** @type{Object} */(vdom)[narg];
               if (val != null)
                 idom["attr"](narg, val[""] ? val.join("") : val);
             case "_":case undefined:;
